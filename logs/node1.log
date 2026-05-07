@@ -1,0 +1,16 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v2.3.12.RELEASE)
+
+2026-05-03 09:48:49.871  INFO 11684 --- [           main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication v0.0.1-SNAPSHOT on DESKTOP-GATE58A with PID 11684 (D:\redis_resources\hm-dianping\target\hm-dianping-0.0.1-SNAPSHOT.jar started by Lenovo in D:\redis_resources\hm-dianping)
+2026-05-03 09:48:49.875 DEBUG 11684 --- [           main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-05-03 09:48:49.876  INFO 11684 --- [           main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-05-03 09:48:50.949  INFO 11684 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-03 09:48:50.952  INFO 11684 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-03 09:48:50.991  INFO 11684 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+^C

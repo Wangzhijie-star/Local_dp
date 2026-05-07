@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmdp.mapper.ShopTypeMapper">
+    <select id="selectList" resultType="com.hmdp.entity.ShopType">
+        select * from tb_shop_type order by sort
+    </select>
+</mapper>

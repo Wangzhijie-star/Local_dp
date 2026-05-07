@@ -1,0 +1,38 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v2.3.12.RELEASE)
+
+2026-05-03 10:06:42.168  INFO 3432 --- [           main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication v0.0.1-SNAPSHOT on DESKTOP-GATE58A with PID 3432 (D:\redis_resources\hm-dianping\target\hm-dianping-0.0.1-SNAPSHOT.jar started by Lenovo in D:\redis_resources\hm-dianping)
+2026-05-03 10:06:42.182 DEBUG 3432 --- [           main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-05-03 10:06:42.183  INFO 3432 --- [           main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-05-03 10:06:44.178  INFO 3432 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-03 10:06:44.180  INFO 3432 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-03 10:06:44.222  INFO 3432 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2026-05-03 10:06:45.467  INFO 3432 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-05-03 10:06:45.491  INFO 3432 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03 10:06:45.493  INFO 3432 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-05-03 10:06:45.633  INFO 3432 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03 10:06:45.633  INFO 3432 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3217 ms
+2026-05-03 10:06:46.754  WARN 3432 --- [           main] c.b.m.core.injector.AbstractMethod       : [com.hmdp.mapper.ShopTypeMapper.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.4.3 
+2026-05-03 10:06:48.526  INFO 3432 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-05-03 10:06:48.528  INFO 3432 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.149.128:5672]
+2026-05-03 10:06:48.606  INFO 3432 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#45394b31:0/SimpleConnection@2dddc1b9 [delegate=amqp://admin@192.168.149.128:5672/, localPort= 60640]
+2026-05-03 10:06:48.748  INFO 3432 --- [           main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 7.62 seconds (JVM running for 8.203)
+2026-05-03 10:07:08.658  INFO 3432 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 10:07:08.658  INFO 3432 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03 10:07:08.666  INFO 3432 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2026-05-03 10:07:08.686  INFO 3432 --- [nio-8081-exec-1] com.hmdp.utils.RefreshTokenInterceptor   : token is null
+2026-05-03 10:07:09.195  INFO 3432 --- [nio-8081-exec-3] com.hmdp.utils.RefreshTokenInterceptor   : token is null
+2026-05-03 10:07:10.972  INFO 3432 --- [nio-8081-exec-6] com.hmdp.utils.RefreshTokenInterceptor   : token is null
+2026-05-03 10:07:54.220  INFO 3432 --- [nio-8081-exec-5] com.hmdp.utils.RefreshTokenInterceptor   : userDTO:UserDTO(id=null, nickName="User_3582554054", icon="")
+2026-05-03 10:07:54.231  INFO 3432 --- [nio-8081-exec-5] com.hmdp.utils.LoginInterceptor          : LoginInterceptor - URI: /user/me, Method: GET
+2026-05-03 10:07:54.232  INFO 3432 --- [nio-8081-exec-5] com.hmdp.controller.UserController       : user: UserDTO(id=null, nickName="User_3582554054", icon="")

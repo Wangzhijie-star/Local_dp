@@ -1,0 +1,50 @@
+server:
+  # Nginx listens on 8080. The default backend node uses 8081;
+  # cluster startup scripts override this to 8081/8082/8083.
+  port: 8081
+spring:
+  application:
+    name: hmdp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hmdp?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1234
+  redis:
+    host: 192.168.149.128
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+  rabbitmq:
+    host: 192.168.149.128
+    port: 5672
+    username: admin
+    password: 123456
+    virtual-host: /
+    connection-timeout: 3000ms
+    # 生产者确认配置
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    # 消费者配置
+    listener:
+      simple:
+        prefetch: 10 # 每次只取一条消息，公平分发
+        acknowledge-mode: manual  # 手动确认
+        concurrency: 5 #消费者核心线程数
+        max-concurrency: 20 #消费最大线程数
+        retry:
+          enabled: true # 开启重试
+          max-attempts: 3 # 最大重试3次
+          initial-interval: 1000ms # 初始重试间隔
+mybatis-plus:
+  type-aliases-package: com.hmdp.entity # 别名扫描包
+logging:
+  level:
+    com.hmdp: info
