@@ -70,9 +70,8 @@ public class SeckillOrderConsumer {
         SeckillVoucher voucher = seckillVoucherService.getById(orderMessage.getVoucherId());
         if (voucher == null || voucher.getStock() <= 0) {
             log.error("seckill voucher stock not enough,voucher id: {},order id: {}", orderMessage.getVoucherId(), orderMessage.getOrderId());
-            // 手动拒绝消息，避免重复处理，我们在mq中配置死信队列，失败后会自动重试
-            channel.basicNack(deliveryTag, false, false);
-            throw new RuntimeException("库存不足");
+            channel.basicAck(deliveryTag,false);
+            return;
         }
 
         try {
@@ -105,6 +104,7 @@ public class SeckillOrderConsumer {
             log.error("order create failed,order id: {},error:  {}", orderMessage.getOrderId(), e.getMessage());
             // 手动拒绝消息，避免重复处理，我们在mq中配置死信队列，失败后会自动重试
             channel.basicNack(deliveryTag, false, false);
+            return;
         }
     }
 }

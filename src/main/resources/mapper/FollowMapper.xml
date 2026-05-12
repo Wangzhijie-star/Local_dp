@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmdp.mapper.FollowMapper">
+    <select id="selectFollowInfom" resultType="com.hmdp.entity.Follow">
+        select * from tb_follow where user_id=#{userId} and follow_user_id=#{followUserId}
+    </select>
+</mapper>

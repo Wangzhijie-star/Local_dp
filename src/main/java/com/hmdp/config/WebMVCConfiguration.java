@@ -45,7 +45,9 @@ public class WebMVCConfiguration implements WebMvcConfigurer {
                         "/favicon.ico",
                         "/css/**",
                         "/js/**",
-                        "/imgs/**"
+                        "/imgs/**",
+                        // 测试专用
+                        "/test/**"
                 )
                 .order(1);
     }

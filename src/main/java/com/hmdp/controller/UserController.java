@@ -5,15 +5,20 @@ import com.hmdp.dto.LoginFormDTO;
 import com.hmdp.dto.Result;
 import com.hmdp.dto.UserDTO;
 import com.hmdp.entity.UserInfo;
+import com.hmdp.entity.User;
 import com.hmdp.service.IUserInfoService;
 import com.hmdp.service.IUserService;
 import com.hmdp.utils.UserHolder;
 
+import cn.hutool.core.bean.BeanUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import com.hmdp.utils.SystemConstants;
 
 /**
  * <p>
@@ -85,5 +90,20 @@ public class UserController {
         info.setUpdateTime(null);
         // 返回
         return Result.ok(info);
+    }
+    /**
+     * 根据用户id查询用户信息
+     * @param param
+     * @return
+     */
+    @GetMapping("/{id}")
+    public Result getMethodName(@PathVariable Long id) {
+        //数据库查询数据结果类型用UserDTO
+        User user=userService.getById(id);
+        if(user == null){
+            return Result.fail("用户不存在");
+        }
+        UserDTO userDTO = BeanUtil.copyProperties(user, UserDTO.class);
+        return Result.ok(userDTO);
     }
 }
